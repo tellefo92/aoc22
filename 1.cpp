@@ -9,23 +9,14 @@ using namespace std;
 
 int main() {
     string s;
+    int sum = 0;
     vector<int> p;
-    vector<vector<int>> X;
     while (getline(cin, s)) {
-        if (s == "") {
-            X.push_back(p);
-            p.clear();
-        } else {
-            p.push_back(stoi(s));
+        sum += s != "" ? stoi(s) : 0;
+        if (cin.eof() && sum > 0 || s == "") {
+            p.push_back(sum);
+            sum = 0;
         }
-        if (cin.eof() && p.size() > 0) X.push_back(p);
-    }
-    auto sp = [](vector<int> p) {
-        return reduce(p.begin(), p.end());
-    };
-    p.clear();
-    for (int i=0; i < X.size(); i++) {
-        p.push_back(sp(X[i]));
     }
     sort(p.begin(), p.end());
     cout << p.back() << endl;
