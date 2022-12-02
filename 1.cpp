@@ -1,9 +1,4 @@
-#include<iostream>
-#include<vector>
-#include<string>
-#include<algorithm>
-#include<cmath>
-#include<numeric>
+#include "utils.hpp"
 
 using namespace std;
 
