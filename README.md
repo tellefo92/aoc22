@@ -6,8 +6,8 @@
 | [Day 1](https://adventofcode.com/2022/day/1) | [Both parts](1.cpp) |
 | [Day 2](https://adventofcode.com/2022/day/2) | [Both parts](2.cpp) |
 | [Day 3](https://adventofcode.com/2022/day/3) | [Both parts](3.cpp) |
-<!---| [Day 4](https://adventofcode.com/2022/day/4) |  |
-| [Day 5](https://adventofcode.com/2022/day/5) |  |
+| [Day 4](https://adventofcode.com/2022/day/4) | [Both parts](4.cpp) |
+<!---| [Day 5](https://adventofcode.com/2022/day/5) |  |
 | [Day 6](https://adventofcode.com/2022/day/6) |  |
 | [Day 7](https://adventofcode.com/2022/day/7) |  |
 | [Day 8](https://adventofcode.com/2022/day/8) |  |
