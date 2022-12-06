@@ -54,3 +54,11 @@ template <typename T> std::ostream& operator<<(std::ostream& os, const std::vect
     }
     return os;
 }
+
+// Function to print set elements on a single line, separated by whitespace
+template <typename T> std::ostream& operator<<(std::ostream& os, const std::set<T> s) {
+    for (auto element: s) {
+        os << element << " ";
+    }
+    return os;
+}
