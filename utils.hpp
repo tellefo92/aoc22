@@ -1,3 +1,4 @@
+#pragma once
 #include<iostream>
 #include<vector>
 #include<string>
@@ -5,6 +6,8 @@
 #include<algorithm>
 #include<cmath>
 #include<numeric>
+#include<set>
+#include<map>
 
 // Python style modulo - Always returns positive or 0
 int pmod(const int& a, const int& b){
@@ -19,6 +22,35 @@ int pmod(const int& a, const int& b){
         std::cout << "Cannot divide by 0!" << std::endl;
         exit(-1);
     }
+}
+
+// Function to split string separated by whitespaces into vector
+template <typename T>
+std::vector<T> splitString(std::string str) {
+    // Stream strings into e and push to result
+    std::vector<T> result;
+    std::istringstream is(str);
+    T e;
+    while (is >> e) result.push_back(e);
+
+    return result;
+}
+
+// Function to split string by delimiter -> returns vector of elements
+template <typename T>
+std::vector<T> splitString(std::string str, char delimiter) {
+    if (delimiter != ' ') {
+        // Replace occurances of any remaining characters in delimiter from string with whitespace
+        std::size_t found = str.find_first_of(delimiter);
+        while (found != std::string::npos) {
+            str[found] = ' ';
+            found = str.find_first_of(delimiter);
+        }
+    }
+
+    std::vector<T> result = splitString<T>(str);
+
+    return result;    
 }
 
 // Function to split string by delimiter -> returns vector of elements
@@ -39,10 +71,7 @@ std::vector<T> splitString(std::string str, std::string delimiter) {
     }
 
     // Stream elements into e and push to result
-    std::vector<T> result;
-    std::istringstream is(str);
-    T e;
-    while (is >> e) result.push_back(e);
+    std::vector<T> result = splitString<T>(str);
 
     return result;    
 }
